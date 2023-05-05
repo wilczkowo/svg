@@ -10,6 +10,8 @@
 :root {
   --HEADER-BGCOLOR: #333;
   --HEADER-COLOR: whitesmoke;
+  --dark-triangle-color: #4a65c4;
+  --light-triangle-color: #1be4cc;
 }
 
 html {
@@ -25,4 +27,34 @@ body {
   color: var(--HEADER-COLOR);
   justify-content: center;
   align-items: center;
+}
+
+#darkGroup {
+  fill: var(--dark-triangle-color);
+}
+
+#lightGroup {
+  fill: var(--light-triangle-color);
+}
+rect {
+  fill: transparent;
+}
+
+.animation{
+}
+
+.animation:hover,
+.animation:focus-within {
+  /* border: #1be4cc solid 2px; */
+  transition: all 0.5s ease-in-out;
+}
+
+:is(.animation:hover,
+.animation:focus-within) #dark2 {
+  transform: translateX(30px);
+  transition: all 1s ease-in-out;
+}
+.animation:hover,
+.animation:focus-within p {
+  transform: scale(3);
 }
